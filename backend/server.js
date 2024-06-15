@@ -19,7 +19,7 @@ cloudinary.config({
 const app = express()
 const PORT = process.env.PORT || 5000
 
-app.use(express.json({ limit: "10mb"})) // parse req.body not to large to prevent an attacker from sending a large file hence prevent DOS
+app.use(express.json({ limit: "4mb"})) // parse req.body not to large to prevent an attacker from sending a large file hence prevent DOS
 app.use(express.urlencoded({extended: true}))
 app.use(cookieParser())
 
