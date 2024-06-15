@@ -22,6 +22,7 @@ const ProfilePage = () => {
 	const [feedType, setFeedType] = useState("posts");
 
 
+
 	const queryClient = useQuery()
 	const coverImgRef = useRef(null);
 	const profileImgRef = useRef(null);
@@ -201,7 +202,7 @@ const ProfilePage = () => {
 								</div>
 
 								<div className='flex gap-2 flex-wrap'>
-									{user?.link && (
+								{user?.link && (
 										<div className='flex gap-1 items-center '>
 											<>
 												<FaLink className='w-3 h-3 text-slate-500' />
@@ -211,7 +212,7 @@ const ProfilePage = () => {
 													rel='noreferrer'
 													className='text-sm text-blue-500 hover:underline'
 												>
-													youtube.com/@asaprogrammer_
+													{user?.link}
 												</a>
 											</>
 										</div>
